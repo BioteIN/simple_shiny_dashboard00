@@ -1,0 +1,24 @@
+{
+    "id": "9650F547",
+    "path": "B:/My Projects/R/ShinyHelloWorld/sample_revenue_dashboard_shiny-master/app.R",
+    "project_path": null,
+    "type": "r_source",
+    "hash": "0",
+    "contents": "",
+    "dirty": false,
+    "created": 1608475288027.0,
+    "source_on_save": false,
+    "relative_order": 5,
+    "properties": {
+        "cursorPosition": "16,49",
+        "scrollLine": "3"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 1608497763,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1608497763176,
+    "read_only": false,
+    "read_only_alternatives": []
+}

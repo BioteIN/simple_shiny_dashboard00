@@ -1,0 +1,31 @@
+# load the required packages
+library(shiny)
+require(shinydashboard)
+library(ggplot2)
+library(dplyr)
+
+source(file = "global.R", local = TRUE)
+
+source(file = "ui/ui.R", local = TRUE)
+
+
+
+
+#completing the ui part with dashboardPage
+ui <- dashboardPage(title = 'This is my Page title', header, sidebar, body, skin='green')
+
+# create the server functions for the dashboard  
+server <- function(input, output) { 
+  
+  #some data manipulation to derive the values of KPI boxes
+  total.revenue <- sum(recommendation$Revenue)
+  sales.account <- recommendation %>% group_by(Account) %>% summarise(value = sum(Revenue)) %>% filter(value==max(value))
+  prof.prod <- recommendation %>% group_by(Product) %>% summarise(value = sum(Revenue)) %>% filter(value==max(value))
+  
+  source(file = "server/server.R", local = TRUE)
+  
+  
+}
+
+# run app.R
+shinyApp(ui, server)
